@@ -87,12 +87,12 @@ Results are stored under **_log/_** directory, and here are details of the resul
 
     log/
     ├── ...
-    ├── date_time/                        # Date and time of the test
-    │   ├── pkg_name/                     # Tested app package name
-    |   |   ├── run_number/               # Each run number
-    |   |   |   ├── adb_logcat.log        # ADB logcat while testing
-    |   |   |   ├── ui_graph.log          # A graph of tested UIs
-    |   |   |   └── uis_traversed.log     # A list of tested UIs 
+    ├── date_time/                            # Date and time of the test
+    │   ├── pkg_name/                         # Tested app package name
+    |   |   ├── run_number/                   # Each run number
+    |   |   |   ├── adb_logcat.log            # ADB logcat while testing
+    |   |   |   ├── ui_graph.log              # A graph of tested UIs
+    |   |   |   └── uis_traversed.log         # A list of tested UIs 
     │   |   └── ...
     │   |── ...
     |   └-- results.log                       # Overall test results whether succeeded or failed
