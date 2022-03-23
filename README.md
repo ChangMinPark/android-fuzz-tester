@@ -82,7 +82,7 @@ For more details, please read the paper.
 
 ### 3. Results
 
-Results are stored under **_/log_** directory, and here are details of the results:
+Results are stored under **_log/_** directory, and here are details of the results:
 
 
     log/
