@@ -38,6 +38,9 @@ class FuzzTester:
                             %(conf.NUM_RUNS_PER_APP))
 
     def run(self):
+        '''
+        Run and distribute apps to available devices
+        '''
         threads=[]
         for idx, apk in enumerate(self._apks):
             msg = '================== %s (%d/%d) ==================' \
@@ -66,7 +69,9 @@ class FuzzTester:
     # ----------------- #
     def _run_individual(self, d_serial: str, 
                         apk: str, random_mode: bool = False) -> None:
-
+        '''
+        Run the given app in dividual mode, not follow-the-leader
+        '''
         def run() -> None:
             try:
                 d = DeviceDriver.get_instance()
@@ -126,9 +131,10 @@ class FuzzTester:
             d.clean_device(d_serial, last= nth_try == conf.NUM_RUNS_PER_APP-1)
         
   
-
-
     def _run_follower_leader(self, apk: str, random_mode: bool = False) -> None:
+        '''
+        Run the given app in follow-the-leader mode
+        '''
         d = self._device_driver
         
         for nth_try in range(conf.NUM_RUNS_PER_APP):

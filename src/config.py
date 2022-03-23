@@ -13,7 +13,7 @@ MODE_RANDOM = False
 
 REBOOT_AFTER_EACH_APP = False
 KEEP_INSTALLED_APP = False
-NUM_RUNS_PER_APP = 5            
+NUM_RUNS_PER_APP = 3            
 WAIT_AFTER_APP_LAUNCH = 5          # Wait for the device to load first screen 
 APP_INSTALL_DELAY = 30
 TESTING_TIMEOUT = WAIT_AFTER_APP_LAUNCH + 180   # in second
