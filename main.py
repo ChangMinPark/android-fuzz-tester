@@ -115,21 +115,16 @@ class FuzzTester:
             except Exception as e:
                 print(e)
 
+            # Save test results and clean device
+            d.clean_device(d_serial, last= nth_try == conf.NUM_RUNS_PER_APP-1)
+
         for nth_try in range(conf.NUM_RUNS_PER_APP):
             self._logger.info('[ Run: %d ]' %(nth_try))
 
             # Prepare the device before testing
             d = DeviceDriver.get_instance()
             d.prepare_device(d_serial, apk, nth_try=nth_try)
-
             commons.run_thread_timer(conf.TESTING_TIMEOUT, run, args=())
-            
-            # Save test results and clean device
-            # TODO: Currently, after above 'run' function, graph nodes do not remain
-            # in the DeviceDriver singleton class. It supposed to be stored, but
-            # somehow it doesn't work now. SHOULD BE FIXED!
-            d.clean_device(d_serial, last= nth_try == conf.NUM_RUNS_PER_APP-1)
-        
   
     def _run_follower_leader(self, apk: str, random_mode: bool = False) -> None:
         '''

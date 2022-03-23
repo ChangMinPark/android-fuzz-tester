@@ -247,10 +247,6 @@ class DeviceDriver:
             self._logger.debug('%s, %s ---> %s' %(d_serial, \
                                 adb.get_foreground_activity_name(d_serial), 
                                 str(node.split(conf.DELIMITER)[-1])))
-        #elif not conf.MODE_FOLLOWER_LEADER:
-        #    print('[%s] %s, %s' %(str(datetime.now()), d_serial,
-        #            adb.get_foreground_activity_name(d_serial)))
-
         if not random_mode:
             if not self._visit_node(d_serial, node):
                 self.add_new_activity(d_serial, node)

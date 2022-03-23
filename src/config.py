@@ -8,8 +8,8 @@ import os
 # ------------ #
 #   Settings   #
 # ------------ #
-MODE_FOLLOWER_LEADER = True
-MODE_RANDOM = False      
+MODE_FOLLOWER_LEADER = False
+MODE_RANDOM = True      
 
 REBOOT_AFTER_EACH_APP = False
 KEEP_INSTALLED_APP = False
