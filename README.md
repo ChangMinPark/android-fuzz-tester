@@ -14,7 +14,7 @@ In doing so, it adapts multiple testing strategies and idea from [Mimic paper](h
 
 Our tool adapts the **_follow-the-leader_** design idea from **_Mimic_**, and above figure shows how Mimic runs. 
 
-Just as Mimic, our tool takes as input a set of apps but not a script. Our system already includes pre-defined scripts in the main file, _main.py_. 
+Just as Mimic, our tool takes a set of apps as input but not a script. Our system already includes pre-defined scripts in the main file, _main.py_. 
 It runs on a desktop and runs configured tests on the set of devices connected via USB (also works with emulators). The tool is designed to be able 
 to scale the number of apps tested as well as the number of devices used. Unlike Mimic provides a programming model and lets app developers to 
 write a script, ours already pre-defined testing behaviors but still lets users to change testing modes and other configurations. The main 
